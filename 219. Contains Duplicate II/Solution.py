@@ -8,14 +8,21 @@ class Solution:
             con_dup[num] = i
         return False'''
         # Solution 2
-        if len(nums) == len(set(nums)):
+        '''if len(nums) == len(set(nums)):
             return False
         for i in range(len(nums)):
             if nums[i] in nums[i+1:i+1+k]:
                 return True
-        return False
+        return False'''
         # Solution 3
-        
+        con_dup = set()
+        for i in range(len(nums)):
+            if nums[i] in con_dup:
+                return True
+            con_dup.add(nums[i])
+            if len(con_dup) > k:
+                con_dup.remove(nums[i - k])
+        return False
 
 
 
