@@ -1,5 +1,13 @@
 class Solution:
-    def rotateTheBox(self, boxGird : List[List[str]]) -> List[List[str]]:
-        pass
+    def rotateTheBox(self, boxGrid):
+        
 
-boxGird = []
+boxGrid = []
+while True:
+    line = input()
+    if line == "":
+        break
+    row = list(map(str,line.split()))
+    boxGrid.append(row)
+obj = Solution()
+print(obj.rotateTheBox(boxGrid))
