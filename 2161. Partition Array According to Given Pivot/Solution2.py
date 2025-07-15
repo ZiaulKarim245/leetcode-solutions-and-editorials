@@ -1,9 +1,11 @@
 from typing import List
 class Solution:
     def pivotArray(self, nums: List[int], pivot: int) -> List[int]:
+        # List comprehension
         first = [nums[i] for i in range(len(nums)) if nums[i] < pivot]
         last = [nums[i] for i in range(len(nums)) if nums[i] > pivot]
         equal = [nums[i] for i in range(len(nums)) if nums[i] == pivot]
+        ## For Loop
         # first, equal, last = [],[],[]
         # for i in range(len(nums)):
         #     if nums[i] < pivot:
